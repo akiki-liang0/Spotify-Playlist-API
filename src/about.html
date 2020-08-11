@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #ffffff;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  box-shadow: 1px 1px 3px black, 0 0 22px rgb(42, 83, 44), 0 0 5px darkolivegreen;
+  stroke-width: 2px;
+  stroke: black;
+  background-color: rgb(42, 85, 34);
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #90dac7;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: #C6DEBA;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* title */
+.title {
+  align-content: center sticky;
+  vertical-align: center sticky;
+  max-height: 150px;
+    max-width: 140px;
+
+}
+/*img*/
+img {
+    align-content: relative sticky;
+    border-radius: 50%;
+    vertical-align: relative sticky;
+    max-height: 150px;
+    max-width: 140px;
+    border-color:rgb(42, 83, 44)
+    box-shadow: 3px black;
+
+}
+
+/* gen boxes */
+.general {
+            position: center sticky;
+            width: 30.5%;
+            height: 550px;
+            margin: 15px;
+            box-shadow: 1px 1px 3px black, 0 0 22px rgb(42, 83, 44), 0 0 5px darkolivegreen;
+             stroke-width: 2px;
+             stroke: black;
+            float: left;
+            color: rgb(17, 17, 17);
+            text-color: rgb(17, 17, 17);
+            text-align: center;
+            border-radius: 50px;
+            background-color: #ffffff !important;
+            align-content: space-between;
+            align: center;
+            vertical-align: middle;
+          
+        }
+
+/* h1 */
+.h1 {
+    align-content: center;
+    vertical-align: middle;
+    text-align: center;
+}
+.social {
+  align-content: center;
+  vertical-align: left;
+  width: 30.5%;
+  height: 77px;
+  margin: 55px;
+}
+/* h4 */
+.h4 {
+align-content: center;
+vertical-align: top;
+}
+/* pp code */
+.p {
+    align-content: center;
+    vertical-align: relative;
+    text-align: center;
+    padding: 2rem 2rem 4rem 4rem;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+    <div class="main">
+        <div class="sidenav">
+            <button class="dropdown-btn">Dropdown
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+              <a href="main.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="playlist.html">Playlist</a>
+            </div>
+    </div>
+    <script>
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+      } else {
+      dropdownContent.style.display = "block";
+      }
+      });
+    }
+    </script>
+
+<div class="main">
+<title>About Us!</title>
+<div class="general">
+    <h2>Akiki L.</h2>
+    <img src="akiki.jpg"></img>
+    <h4>Back-End, API's, MIDI</h4>
+    <p>Hope you enjoy this website!</p>
+    <i class="social"><a href="https://www.linkedin.com/in/akiki-liang-830019177/"><img src="iconfinder_1_Linkedin_unofficial_colored_svg_5296501.png"></i></a>
+    <i class="social"><a href="https://github.com/akiki-liang0"><img src="iconfinder_github-social-media_765246.png"></i></a>
+</div>
+
+<div class="general">
+    <h2>Lauren W.</h2>
+    <img src="lauren.jpg"></img>
+    <h4>MIDI Wave Implementation</h4>
+    <p>I love coding!</p>
+    <i class="social"><a href="https://www.linkedin.com/in/lauren-wagner-bb34191b3/"><img src="iconfinder_1_Linkedin_unofficial_colored_svg_5296501.png"></i></a>
+    <i class="social"><a href="https://github.com/lcwagner01"><img src="iconfinder_github-social-media_765246.png"></i></a>
+</div>
+<div class="general">
+    <h2>Tobechi M.</h2>
+    <img src="tobechi.jpg"></img>
+    <h4>API Implementation</h4>
+    <p>Follow me!</p>
+    <i class="social"><a href="https://www.linkedin.com/in/tobechimaduchukwu/"><img src="iconfinder_1_Linkedin_unofficial_colored_svg_5296501.png"></i></a>
+    <i class="social"><a href="https://github.com/tmaduchukwu"><img src="iconfinder_github-social-media_765246.png"></i></a>
+</div>
+<div class="general">
+  <h2>Allie Y.</h2>
+  <img src="allie.jpg"></img>
+  <h4>Website, API's</h4>
+  <p>Follow me!</p>
+  <i class="social"><a href="https://www.linkedin.com/in/alexandria-y-6b3593176/"><img src="iconfinder_1_Linkedin_unofficial_colored_svg_5296501.png"></i></a>
+  <i class="social"><a href="https://github.com/ayip10"><img src="iconfinder_github-social-media_765246.png"></i></a>
+</div>
+<div class="general">
+  <h2>Catherine D.</h2>
+  <img src="cat.jpg"></img>
+  <h4>Front-End</h4>
+  <p>and I love coding!</p>
+  <i class="social"><a href="https:/www.linkedin.com/in/catiesai"><img src="iconfinder_1_Linkedin_unofficial_colored_svg_5296501.png"></i></a>
+  <i class="social"><a href="https://github.com/raegirl1"><img src="iconfinder_github-social-media_765246.png"></i></a>
+</div>
+
+
+</div>
+
+</div>
+</body>
